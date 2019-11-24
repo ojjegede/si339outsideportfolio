@@ -11,6 +11,7 @@
   </head>
 <body>
 <div class= "container">
+<div class="logo">Alain Cohn</div>
 <div class="nav">
   <ul>
     <li><a href="index.html">Home</a></li>
@@ -20,6 +21,7 @@
     <li><a href="links.html">Links</a></li>
   </ul>
 </div>
+<div class="content">
 <button class="accordion">Publications</button>
 <div class="panel">
 
@@ -115,12 +117,12 @@
       <li>Why Do The Rich Oppose Redistribution? An Experiment With America’s Top 5%
           (with Lasse Jessen, Marko Klasnja and Paul Smeets)</li>
     </ul>
-  </div>
+  </div></div>
 </div>
 <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
-    
+
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -129,15 +131,15 @@
           panel.style.maxHeight = null;
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
+        }
       });
     }
     </script>
 <div class="footer">
     <p>Alain Cohn</p>
     <p>The University of Michigan School of Information</p>
-    <p>105 S State StAnn Arbor, MI 48109</p> 
+    <p>105 S State StAnn Arbor, MI 48109</p>
     <p>Email: adcohn@umich.edu</p>
-  </div>  
+  </div>
 </body>
 </html>
