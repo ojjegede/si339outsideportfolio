@@ -7,11 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-  $( function() {
-    $( "#accordion" ).accordion();
-  } );
-  </script>
     <title>Teaching</title>
   </head>
 <body>
@@ -25,47 +20,68 @@
     <li><a href="links.html">Links</a></li>
   </ul>
 </div>
-<div id="accordion">
-  <h3>2019</h3>
-  <div>
-  <li> Choice Architecture (Master), University of Michigan</li>
-  <li> Persuasion and Social Influence (Bachelor), University of Michigan</li>
-  </div>
-  <h3>2018</h3>
-  <div>
+
+<button class="accordion">2019</button>
+<div class="panel">
+    <li>Choice Architecture (Master), University of Michigan</li>
+    <li>Persuasion and Social Influence (Bachelor), University of Michigan</li>
+</div>
+
+<button class="accordion">2018</button>
+<div class="panel">
   <li>Choice Architecture (Master), University of Michigan</li>
   </div>
-  <h3>2016</h3>
-  <div>
+
+<button class="accordion">2016</button>
+<div class="panel">
   <li>Responsible Leadership through Choice Architecture (MBA, guest lectures), University of Chicago Booth School of Business</li>
   </div>
-  <h3>2014</h3>
-  <div>
+
+<button class="accordion">2014</button>
+<div class="panel">
     <li>Topics in Experimental and Behavioral Economics (Ph.D.), University of Zurich</li>
   </div>
-  <h3>2013</h3>
-  <div>
+
+<button class="accordion">2013</button>
+<div class="panel">
 <li>Business Experiments (MBA, guest lectures), University of Zurich</li>
 <li>Advanced Microeconomics (Bachelor), University of Zurich</li>
 <li>Topics in Experimental and Behavioral Economics (Ph.D.), University of Zurich</li>
+  </div>
 
-  </div>
-  <h3>2012</h3>
-  <div>
-    <li>Empirical Methods of Experimental Economics (Master), University of Zurich</li>
-  </div>
-  <h3>2012</h3>
-  <div>
+<button class="accordion">2012</button>
+<div class="panel">
     <li>Business Experiments (MBA, guest lectures), University of Zurich</li>
     <li>Empirical Methods of Experimental Economics (Master), University of Zurich</li>
   </div>
-  <h3>2011</h3>
-  <div>
+
+<button class="accordion">2011</button>
+ <div class="panel">
 <li>Empirical Methods of Experimental Economics (Master), University of Zurich</li>
   </div>
+
 </div>
-<footer id="footer">
-  </footer>
-  </div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+<div class="footer">
+    <p>Alain Cohn</p>
+    <p>The University of Michigan School of Information</p>
+    <p>105 S State StAnn Arbor, MI 48109</p> 
+    <p>Email: adcohn@umich.edu</p>
+  </div>  
 </body>
 </html>

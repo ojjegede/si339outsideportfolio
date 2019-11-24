@@ -7,11 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-  $( function() {
-    $( "#accordion" ).accordion();
-  } );
-  </script>
     <title>Links</title>
   </head>
 <body>
@@ -25,16 +20,17 @@
     <li><a href="links.html">Links</a></li>
   </ul>
 </div>
-<div id = "accordion">
-  <h3>Professional</h3>
-    <div>
+<button class="accordion">Professional</button>
+<div class="panel">
       <ul>
         <li><a href = "https://www.si.umich.edu/people/alain-cohn">University of Michigan</a></li>
         <li><a href = "https://scholar.google.com/citations?user=WaIlibcAAAAJ&hl=en">Google Scholar</a></li>
         <li><a href = "https://www.researchgate.net/profile/Alain_Cohn">Research Gate</a></li>
       <ul>
     </div>
-  <h3>Collaborators</h3>
+
+<button class="accordion">Collaborators</button>
+  <div class="panel">
   <div>
     <ul>
       <li>Leandro Carvalho (University of Southern California)</li>
@@ -67,8 +63,28 @@
 
   </div>
 </div>
-<footer id="footer">
-  </footer>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+<div class="footer">
+    <p>Alain Cohn</p>
+    <p>The University of Michigan School of Information</p>
+    <p>105 S State StAnn Arbor, MI 48109</p> 
+    <p>Email: adcohn@umich.edu</p>
+  </div>  
   </div>
 </body>
 </html>

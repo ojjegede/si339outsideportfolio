@@ -7,11 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-  $( function() {
-    $( "#accordion" ).accordion();
-  } );
-  </script>
     <title>Research</title>
   </head>
 <body>
@@ -25,9 +20,8 @@
     <li><a href="links.html">Links</a></li>
   </ul>
 </div>
-<div id="accordion">
-  <h3>Publications</h3>
-  <div>
+<button class="accordion">Publications</button>
+<div class="panel">
 
     <ul>
       <li><a href ="https://science.sciencemag.org/content/365/6448/70.full?ijkey=i0aoWpwTObRgM&keytype=ref&siteid=sci">
@@ -68,8 +62,8 @@
           Online appendix II Data and code</li>
     </ul>
   </div>
-  <h3>Working Papers</h3>
-  <div>
+<button class="accordion">Working papers</button>
+<div class="panel">
     <!-- <p>
       <a href = "https://drive.google.com/file/d/1UGPsPc_S2qZv8JpeUv1CJDE-NxI74qMp/view">
           Job History, Work Attitude, and Employability (with Michel Maréchal,
@@ -97,8 +91,9 @@
           (with Lasse Jessen, Marko Klasnja and Paul Smeets)</li>
     </ul>
   </div>
-  <h3>Works In Progress</h3>
-  <div>
+
+<button class="accordion">Works In Progress</button>
+<div class="panel">
     <!-- <p>
       Job History, Work Attitude, and Employability (with Michel Maréchal,
           Frédéric Schneider and Roberto Weber), revise and resubmit at Journal of
@@ -121,11 +116,28 @@
           (with Lasse Jessen, Marko Klasnja and Paul Smeets)</li>
     </ul>
   </div>
-
-  </div>
 </div>
-<footer id="footer">
-  </footer>
-  </div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+<div class="footer">
+    <p>Alain Cohn</p>
+    <p>The University of Michigan School of Information</p>
+    <p>105 S State StAnn Arbor, MI 48109</p> 
+    <p>Email: adcohn@umich.edu</p>
+  </div>  
 </body>
 </html>

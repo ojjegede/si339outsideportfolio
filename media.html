@@ -25,9 +25,9 @@
     <li><a href="links.html">Links</a></li>
   </ul>
 </div>
-<div id="accordion">
-  <h3>Media articles covering my research</h3>
-  <div>
+
+<button class="accordion">Media articles covering my research</button>
+<div class="panel">
   <li> <a href="https://www.forbes.com/sites/traversmark/2019/07/23/what-does-americas-top-5-think-about-income-inequality/#72c325561b68">What Does America's Top 5% Think About Income Inequality? (Forbes)</a></li>
   <li><a href="https://www.wsj.com/articles/people-are-more-honest-than-we-think-new-study-finds-11561053847">People Are More Honest Than We Think, New Study Finds (The Wall Street Journal)</a></li>
   <li><a href="https://www.economist.com/science-and-technology/2019/06/22/people-are-more-honest-than-they-think-they-are">People are more honest than they think they are (The Economist)</a></li>
@@ -49,24 +49,47 @@
   <li><a href="https://hbr.org/2014/11/do-employees-reciprocate-positively-to-a-pay-raise-maybe-not-so-much">Do Employees Reciprocate Positively to a Pay Raise? Maybe Not So Much (Harvard Business Review)</a></li>
   <li><a href="https://www.npr.org/2015/11/18/456459455/there-s-more-meaning-behind-wage-cuts-than-lost-pay">There's More To Wage Cuts Than Just Lost Pay (NPR)</a></li>
   </div>
-  <h3>Media articles in German</h3>
-  <div>
+  
+<button class="accordion">Media articles in German</button>
+<div class="panel">
     <li> <a href="https://www.nzz.ch/auch-finanzprofis-haben-gefuehle-1.17572138">Auch Finanzprofis haben Gefühle (Neue Zürcher Zeitung)</a></li>
     <li><a href="https://drive.google.com/file/d/1-_nWPmwGqTLaHzyCH5Y1zIn4IgC2GJus/view">Das gewisse Etwas am Arbeitsplatz (Neue Luzerner Zeitung)</a></li>
     <li><a href="https://drive.google.com/file/d/1-8AlxEZB8-JLSSOmdN9Ckyl4CwWZQRDr/view">Mehr Lohn - mehr Motivation, ein Trugschluss? (Goldwyn Reports)</a></li>
     <li><a href="https://drive.google.com/file/d/1pftnRSg6GiKcnl5_uOB8J2d0Oir7jMHn/view">Lohnkürzungen: Geteiltes Leid ist halbes Leid? (Personal Quarterly)</a></li>
     <li><a href="https://www.handelsblatt.com/politik/konjunktur/oekonomie/wissenswert/bezahlung-wenn-sich-ungleichheit-raecht/4050250.html?ticket=ST-25606619-Yilq7wcXeiHGk9cPLurj-ap2">Wenn sich Ungleichheit rächt (Handelsblatt)</a></li>
   </div>
-  <h3>Videos</h3>
 
-  <div></div>
-  <h3>Podcasts</h3>
-  <div>
+<button class="accordion">Videos</button>
+<div class="panel">
+
+</div>
+<button class="accordion">Podcasts</button>
+<div class="panel">
   <li><a href="https://www.wbez.org/shows/wbez-news/is-job-hopping-good-for-you/f39751e1-cdf0-4a30-a46e-6f369312ad18">Is Job Hopping Good For You? (WBEZ 91.5 Chicago)</a></li>
   </div>
 </div>
-<footer id="footer">
-  </footer>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+<div class="footer">
+    <p>Alain Cohn</p>
+    <p>The University of Michigan School of Information</p>
+    <p>105 S State StAnn Arbor, MI 48109</p> 
+    <p>Email: adcohn@umich.edu</p>
+  </div>  
   </div>
 </body>
 </html>
