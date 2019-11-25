@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Research</title>
   </head>
 <body>
 <div class= "container">
-<div class="logo">Alain Cohn</div>
-<div class="nav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="teaching.html">Teaching</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="links.html">Links</a></li>
-  </ul>
-</div>
-<div class="content">
+  <div class="topnav">
+    <a href="index.html" class="active">Alain Cohn</a>
+    <div id="myLinks">
+      <a href="index.html" class="current">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="media.html">Media</a>
+      <a href="links.html">Links</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+    <h1>Research</h1>
 <button class="accordion">Publications</button>
 <div class="panel">
 
@@ -117,7 +121,12 @@
       <li>Why Do The Rich Oppose Redistribution? An Experiment With America’s Top 5%
           (with Lasse Jessen, Marko Klasnja and Paul Smeets)</li>
     </ul>
-  </div></div>
+  </div><div class="footer">
+      <p>Alain Cohn</p>
+      <p>The University of Michigan School of Information</p>
+      <p>105 S State StAnn Arbor, MI 48109</p>
+      <p>Email: adcohn@umich.edu</p>
+    </div>
 </div>
 <script>
     var acc = document.getElementsByClassName("accordion");
@@ -135,11 +144,16 @@
       });
     }
     </script>
-<div class="footer">
-    <p>Alain Cohn</p>
-    <p>The University of Michigan School of Information</p>
-    <p>105 S State StAnn Arbor, MI 48109</p>
-    <p>Email: adcohn@umich.edu</p>
-  </div>
+
+  <script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 </body>
 </html>

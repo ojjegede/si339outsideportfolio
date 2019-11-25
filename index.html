@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Home</title>
   </head>
 <body>
-<div class= "container">
-<div class="logo">Alain Cohn</div>
-<div class="nav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="teaching.html">Teaching</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="links.html">Links</a></li>
-  </ul>
+<div class= "container-home">
+<div class="topnav">
+  <a href="index.html" class="active">Alain Cohn</a>
+  <div id="myLinks">
+    <a href="index.html" class="current">Home</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="media.html">Media</a>
+    <a href="links.html">Links</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
-<div class="title"><h1>Alain Cohn</h1></div>
 <div class="profile"><img src="images/profile.jpg" alt=""/></div>
-<div class="about"><p>I am an Assistant Professor of Information at the University of Michigan School of Information. My research lies at the intersection of economics, finance and psychology. Much of my work uses lab and field experiments, often in collaboration with firms and government agencies, to explore topics like honesty, employee motivation and financial decision making. My studies have been published in top general interest and economics outlets such as Nature, Science, American Economic Review, Review of Economic Studies and Review of Financial Studies.</p></div>
+<div class="about"><h2>About me</h2><p>I am an Assistant Professor of Information at the University of Michigan School of Information. My research lies at the intersection of economics, finance and psychology. Much of my work uses lab and field experiments, often in collaboration with firms and government agencies, to explore topics like honesty, employee motivation and financial decision making. My studies have been published in top general interest and economics outlets such as Nature, Science, American Economic Review, Review of Economic Studies and Review of Financial Studies.</p></div>
 
 <div class="latest"><h2>Latest</h2><h3>New Papers</h3><p>Civic Honesty Around the Globe (Science, available for free on the "Research" page)</p><h3>New Working Papers</h3><p>Why Do The Rich Oppose Redistribution? An Experiment With America's Top 5%</p></div>
 
 <form action="https://formspree.io/defranks@umich.edu" method = "post">
     <fieldset>
-      <legend>Contact</legend><br><br>
+      <h2><legend>Contact</legend></h2><br><br>
     <label for="name">Name:<br>
     <input type="text" id = "name" value="Type your first and last name here..."><br></label>
     <label>Email: <br><input type="email" value = "email@email.com"></label>
@@ -37,11 +40,21 @@
   </fieldset>
 </form>
 <div class="footer">
-    <p>Alain Cohn</p>
-    <p>The University of Michigan School of Information</p>
-    <p>105 S State StAnn Arbor, MI 48109</p>
-    <p>Email: adcohn@umich.edu</p>
-  </div>
-  </div>
+    <p>Alain Cohn<br>
+    The University of Michigan School of Information<br>
+    105 S State StAnn Arbor, MI 48109<br>
+    Email: adcohn@umich.edu </p>
+  </div></div>
+
+  <script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 </body>
 </html>
