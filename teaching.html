@@ -11,7 +11,6 @@
     <title>Teaching</title>
   </head>
 <body>
-<div class= "container">
   <div class="topnav">
     <a href="index.html" class="active">Alain Cohn</a>
     <div id="myLinks">
@@ -25,68 +24,54 @@
       <i class="fa fa-bars"></i>
     </a>
   </div>
+  <div class="flex">
+  <div class="content"><h1>Teaching</h1>
 <button class="accordion">2019</button>
-<div class="panel">
+<div class="panel"><br>
     <li>Choice Architecture (Master), University of Michigan</li>
-    <li>Persuasion and Social Influence (Bachelor), University of Michigan</li>
+    <li>Persuasion and Social Influence (Bachelor), University of Michigan</li><br>
 </div>
 
 <button class="accordion">2018</button>
-<div class="panel">
-  <li>Choice Architecture (Master), University of Michigan</li>
+<div class="panel"><br>
+  <li>Choice Architecture (Master), University of Michigan</li><br>
   </div>
 
 <button class="accordion">2016</button>
-<div class="panel">
-  <li>Responsible Leadership through Choice Architecture (MBA, guest lectures), University of Chicago Booth School of Business</li>
+<div class="panel"><br>
+  <li>Responsible Leadership through Choice Architecture (MBA, guest lectures), University of Chicago Booth School of Business</li><br>
   </div>
 
 <button class="accordion">2014</button>
-<div class="panel">
-    <li>Topics in Experimental and Behavioral Economics (Ph.D.), University of Zurich</li>
+<div class="panel"><br>
+    <li>Topics in Experimental and Behavioral Economics (Ph.D.), University of Zurich</li><br>
   </div>
 
 <button class="accordion">2013</button>
-<div class="panel">
+<div class="panel"><br>
 <li>Business Experiments (MBA, guest lectures), University of Zurich</li>
 <li>Advanced Microeconomics (Bachelor), University of Zurich</li>
-<li>Topics in Experimental and Behavioral Economics (Ph.D.), University of Zurich</li>
+<li>Topics in Experimental and Behavioral Economics (Ph.D.), University of Zurich</li><br>
   </div>
 
 <button class="accordion">2012</button>
-<div class="panel">
+<div class="panel"><br>
     <li>Business Experiments (MBA, guest lectures), University of Zurich</li>
-    <li>Empirical Methods of Experimental Economics (Master), University of Zurich</li>
+    <li>Empirical Methods of Experimental Economics (Master), University of Zurich</li><br>
   </div>
 
 <button class="accordion">2011</button>
- <div class="panel">
-<li>Empirical Methods of Experimental Economics (Master), University of Zurich</li>
+ <div class="panel"><br>
+<li>Empirical Methods of Experimental Economics (Master), University of Zurich</li><br>
   </div>
 
 </div>
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-    </script>
 <div class="footer">
-    <p>Alain Cohn</p>
-    <p>The University of Michigan School of Information</p>
-    <p>105 S State StAnn Arbor, MI 48109</p>
-    <p>Email: adcohn@umich.edu</p>
-  </div>
+  <p>Alain Cohn<br>
+  The University of Michigan School of Information<br>
+  105 S State St. - Ann Arbor, MI 48109<br>
+  Email: adcohn@umich.edu </p>
+  </div></div>
   <script>
 function myFunction() {
   var x = document.getElementById("myLinks");
@@ -95,6 +80,20 @@ function myFunction() {
   } else {
     x.style.display = "block";
   }
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
 }
 </script>
 </body>
