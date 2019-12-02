@@ -13,6 +13,13 @@ padding-top: 25px;
 text-align:center;
 }
 
+.cv{
+  padding-bottom:40px;
+  padding-left:20px;
+}
+.cv a{
+  font-weight: bold;
+}
 h2{
   font-size: 22px;
 }
@@ -26,6 +33,7 @@ h3{
 legend{
   text-align:center;
   font-size: 22px;
+  font-weight:bold;
 }
 input{
   width:80vw;
@@ -41,9 +49,10 @@ input{
 
 }
 form{
-  padding-bottom:55px;
+  padding-bottom:25px;
   justify-self:center;
   padding-left:20px;
+  margin-bottom:0;
 }
 
 input[type=submit]{
@@ -241,7 +250,6 @@ form{
   padding-bottom:5px;
 }
 
-
 legend{
   font-size: 22px;
   text-align:left;
@@ -258,6 +266,10 @@ legend{
 .content{
     padding: 0px 120px 0px 120px;
     width:80vw;
+}
+.cv{
+  padding-left:125px;
+  margin-top:-50px;
 }
 
 .footer p{
