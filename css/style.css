@@ -23,8 +23,9 @@ h3{
   font-size: 18px;
 }
 
-h2 legend{
+legend{
   text-align:center;
+  font-size: 22px;
 }
 input{
   width:80vw;
@@ -241,7 +242,8 @@ form{
 }
 
 
-h2 legend{
+legend{
+  font-size: 22px;
   text-align:left;
 }
 
